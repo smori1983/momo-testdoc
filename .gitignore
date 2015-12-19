@@ -1,0 +1,6 @@
+/build
+/composer.phar
+/composer.lock
+/php-cs-fixer.phar
+/vendor
+*.swp
