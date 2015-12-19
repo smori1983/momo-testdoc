@@ -1,8 +1,8 @@
 <?php
 namespace Momo\TestDoc\PHPUnitDoc;
 
-use Momo\TestDoc\PHPUnitDoc\Annotation\Name;
 use Momo\TestDoc\PHPUnitDoc\Annotation\Group;
+use Momo\TestDoc\PHPUnitDoc\Annotation\Name;
 
 class ClassDoc
 {

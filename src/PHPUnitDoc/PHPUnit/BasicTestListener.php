@@ -35,7 +35,7 @@ class BasicTestListener extends \PHPUnit_Util_Printer implements \PHPUnit_Framew
 
     public function __construct(OutputInterface $output)
     {
-        $this->output  = $output;
+        $this->output = $output;
 
         $this->reader = new Reader();
         $this->tableDataSetReader = new TableDataSetReader();

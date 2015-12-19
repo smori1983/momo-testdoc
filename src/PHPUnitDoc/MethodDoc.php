@@ -1,11 +1,11 @@
 <?php
 namespace Momo\TestDoc\PHPUnitDoc;
 
-use Momo\TestDoc\PHPUnitDoc\Annotation\Name;
-use Momo\TestDoc\PHPUnitDoc\Annotation\Given;
-use Momo\TestDoc\PHPUnitDoc\Annotation\When;
-use Momo\TestDoc\PHPUnitDoc\Annotation\Then;
 use Momo\TestDoc\PHPUnitDoc\Annotation\Data;
+use Momo\TestDoc\PHPUnitDoc\Annotation\Given;
+use Momo\TestDoc\PHPUnitDoc\Annotation\Name;
+use Momo\TestDoc\PHPUnitDoc\Annotation\Then;
+use Momo\TestDoc\PHPUnitDoc\Annotation\When;
 use Momo\TestDoc\PHPUnitDoc\PHPUnit\TestReport;
 
 class MethodDoc
