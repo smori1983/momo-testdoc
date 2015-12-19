@@ -6,7 +6,7 @@ use Momo\TestDoc\PHPUnitDoc\Annotation as Doc;
 /**
  * @Doc\Name("Unit Test")
  */
-class Dummy04
+class DummyTest04
 {
     /**
      * @Doc\Given("Given 01")

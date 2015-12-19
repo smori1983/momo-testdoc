@@ -24,29 +24,29 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         return $this->SUT->read($refClass);
     }
 
-    public function testReadDummy01()
+    public function testReadDummyTest01()
     {
-        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\Dummy01');
+        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\DummyTest01');
 
         $this->assertFalse($testDoc->validate());
     }
 
-    public function testReadDummy02()
+    public function testReadDummyTest02()
     {
-        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\Dummy02');
+        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\DummyTest02');
 
         $this->assertFalse($testDoc->validate());
     }
 
-    public function testReadDummy03()
+    public function testReadDummyTest03()
     {
-        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\Dummy03');
+        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\DummyTest03');
 
         $this->assertTrue($testDoc->validate());
 
         $classDoc = $testDoc->getClassDoc();
         $this->assertTrue($classDoc->validate());
-        $this->assertSame('Momo\TestDoc\PHPUnitDoc\Dummy03', $classDoc->getClassName());
+        $this->assertSame('Momo\TestDoc\PHPUnitDoc\DummyTest03', $classDoc->getClassName());
         $this->assertSame('Unit Test', $classDoc->getName());
         $this->assertTrue($classDoc->hasGroup());
         $this->assertSame('Group01', $classDoc->getGroup());
@@ -62,9 +62,9 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array('The Then description.'), $methodDoc->getThen());
     }
 
-    public function testReadDummy04()
+    public function testReadDummyTest04()
     {
-        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\Dummy04');
+        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\DummyTest04');
 
         $this->assertTrue($testDoc->validate());
 
@@ -74,9 +74,9 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array('Then 01', 'Then 02'), $methodDoc->getThen());
     }
 
-    public function testReadDummy05()
+    public function testReadDummyTest05()
     {
-        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\Dummy05');
+        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\DummyTest05');
 
         $this->assertTrue($testDoc->validate());
 
@@ -86,9 +86,9 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('method02', $methodDocs[1]->getMethodName());
     }
 
-    public function testReadDummy06()
+    public function testReadDummyTest06()
     {
-        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\Dummy06');
+        $testDoc = $this->read('Momo\TestDoc\PHPUnitDoc\DummyTest06');
 
         $this->assertTrue($testDoc->validate());
 

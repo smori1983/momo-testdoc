@@ -13,7 +13,7 @@ namespace Momo\TestDoc\PHPUnitDoc;
  * @coversDefaultClass Some\Name\Space
  * @group someGroup
  */
-class Dummy01
+class DummyTest01
 {
     /**
      * @beforeClass

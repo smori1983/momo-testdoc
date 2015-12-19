@@ -7,7 +7,7 @@ use Momo\TestDoc\PHPUnitDoc\Annotation as Doc;
  * @Doc\Name("Unit Test")
  * @Doc\Group("Group01")
  */
-class Dummy02
+class DummyTest02
 {
     public function method01()
     {

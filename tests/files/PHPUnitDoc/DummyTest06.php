@@ -6,7 +6,7 @@ use Momo\TestDoc\PHPUnitDoc\Annotation as Doc;
 /**
  * @Doc\Name("Unit Test")
  */
-class Dummy06
+class DummyTest06
 {
     /**
      * @Doc\When("The When description.")
