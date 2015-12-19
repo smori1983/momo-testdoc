@@ -42,7 +42,7 @@ class MultiPagesHtmlPrinter_groupNameTest extends HtmlPrinterTestCase
     {
         return array(
             array('1.html', 2, 0, 'Group01'),
-            array('1.html', 2, 1, '未分類'),
+            array('1.html', 2, 1, 'Uncategorized'),
         );
     }
 
@@ -59,7 +59,7 @@ class MultiPagesHtmlPrinter_groupNameTest extends HtmlPrinterTestCase
     {
         return array(
             array('_testdata/1.html', 'Group01'),
-            array('_testdata/2.html', '未分類'),
+            array('_testdata/2.html', 'Uncategorized'),
         );
     }
 }

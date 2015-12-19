@@ -81,7 +81,7 @@ class SinglePageHtmlPrinterTest extends HtmlPrinterTestCase
         $this->assertCount(1, $summaryBlock);
         $this->assertSame('1', $summaryBlock->filter('.no')->text());
         $this->assertSame('Unit Test', $summaryBlock->filter('.title')->text());
-        $this->assertSame('未分類', $summaryBlock->filter('.group')->text());
+        $this->assertSame('Uncategorized', $summaryBlock->filter('.group')->text());
         $this->assertSame('Name of method01.', $summaryBlock->filter('.name')->text());
         $this->assertSame('', $summaryBlock->filter('.given')->text());
         $this->assertSame('When of method01.', $summaryBlock->filter('.when')->text());
@@ -95,7 +95,7 @@ class SinglePageHtmlPrinterTest extends HtmlPrinterTestCase
         $this->assertSame('Base Data', $tr->eq(0)->filter('th')->eq(0)->text());
         $this->assertSame('Additional Data', $tr->eq(0)->filter('th')->eq(1)->text());
         $this->assertSame('Result', $tr->eq(0)->filter('th')->eq(2)->text());
-        $this->assertSame('データ[4]', $tr->eq(0)->filter('th')->eq(3)->text());
+        $this->assertSame('Data[4]', $tr->eq(0)->filter('th')->eq(3)->text());
 
         $this->assertSame('', $tr->eq(1)->attr('class'));
         $this->assertSame('1', $tr->eq(1)->filter('td')->eq(0)->text());

@@ -103,13 +103,13 @@ abstract class AbstractHtmlPrinter implements OutputInterface
             $html[] = '<table class="test_result_table full_width">';
             $html[] = '<tr class="label">';
             $html[] = '<th class="col_no">No</th>';
-            $html[] = '<th class="col_name">テスト名</th>';
-            $html[] = '<th class="col_given">前提</th>';
-            $html[] = '<th class="col_when">操作</th>';
-            $html[] = '<th class="col_then">予想結果</th>';
-            $html[] = '<th class="col_result">判定</th>';
-            $html[] = '<th class="col_stat">集計</th>';
-            $html[] = '<th class="col_link">テストデータ</th>';
+            $html[] = '<th class="col_name">Test Name</th>';
+            $html[] = '<th class="col_given">Given</th>';
+            $html[] = '<th class="col_when">When</th>';
+            $html[] = '<th class="col_then">Then</th>';
+            $html[] = '<th class="col_result">Result</th>';
+            $html[] = '<th class="col_stat">Rate</th>';
+            $html[] = '<th class="col_link">Test Data</th>';
             $html[] = '</tr>';
 
             foreach ($group->getItems() as $item) {
@@ -135,7 +135,7 @@ abstract class AbstractHtmlPrinter implements OutputInterface
     private function createAppendixLink(Item $item)
     {
         if ($item->hasTestData()) {
-            return sprintf('<a href="./%s" target="_blank">表示</a>', $this->testDataPage->getHref($item->getTestNo()));
+            return sprintf('<a href="./%s" target="_blank">Show</a>', $this->testDataPage->getHref($item->getTestNo()));
         }
 
         return '';
@@ -186,10 +186,10 @@ abstract class AbstractHtmlPrinter implements OutputInterface
         $html[] = sprintf('<h2 class="group">%s</h2>', $this->e($group->getName()));
         $html[] = '<table>';
         $html[] = sprintf('<tr><td>No</td><td class="no">%d</td></tr>', $item->getTestNo());
-        $html[] = sprintf('<tr><td>テスト名</td><td class="name">%s</td></tr>', $this->e($item->getName()));
-        $html[] = sprintf('<tr><td>前提</td><td class="given">%s</td></tr>', $this->ebr($item->getGiven()));
-        $html[] = sprintf('<tr><td>操作</td><td class="when">%s</td></tr>', $this->ebr($item->getWhen()));
-        $html[] = sprintf('<tr><td>予想結果</td><td class="then">%s</td></tr>', $this->ebr($item->getThen()));
+        $html[] = sprintf('<tr><td>Test Name</td><td class="name">%s</td></tr>', $this->e($item->getName()));
+        $html[] = sprintf('<tr><td>Given</td><td class="given">%s</td></tr>', $this->ebr($item->getGiven()));
+        $html[] = sprintf('<tr><td>When</td><td class="when">%s</td></tr>', $this->ebr($item->getWhen()));
+        $html[] = sprintf('<tr><td>Then</td><td class="then">%s</td></tr>', $this->ebr($item->getThen()));
         $html[] = '</table>';
         $html[] = '</div>';
 
@@ -207,7 +207,7 @@ abstract class AbstractHtmlPrinter implements OutputInterface
         $html = array();
 
         $html[] = '<div class="test_data_block">';
-        $html[] = '<h1 class="test_data_title">テストデータ</h1>';
+        $html[] = '<h1 class="test_data_title">Test Data</h1>';
         $html[] = '<table class="test_data">';
         $html[] = '<tr>';
         foreach ($this->makeTestDataLabel($methodDoc) as $label) {
@@ -243,7 +243,7 @@ abstract class AbstractHtmlPrinter implements OutputInterface
             if (array_key_exists($index, $dataLabel)) {
                 $result[] = $dataLabel[$index];
             } else {
-                $result[] = sprintf('データ[%d]', $index + 1);
+                $result[] = sprintf('Data[%d]', $index + 1);
             }
         }
 
@@ -263,7 +263,7 @@ abstract class AbstractHtmlPrinter implements OutputInterface
         $html = array();
 
         $html[] = '<div class="table_data_block">';
-        $html[] = '<h1 class="table_data_title">テーブル初期データ</h1>';
+        $html[] = '<h1 class="table_data_title">Initial Data of Table(s)</h1>';
 
         foreach ($tableData as $tableName => $tableSpec) {
             $html[] = '<div class="table_block">';
@@ -287,7 +287,7 @@ abstract class AbstractHtmlPrinter implements OutputInterface
 
                 $html[] = '</table>';
             } else {
-                $html[] = '<p class="no_data">レコードなし</p>';
+                $html[] = '<p class="no_data">No Record</p>';
             }
 
             $html[] = '</div>';

@@ -39,7 +39,7 @@ class MultiPagesHtmlPrinter_structureTest extends HtmlPrinterTestCase
      */
     public function testIndexPageTitle()
     {
-        $this->assertSame('テスト一覧', $this->filterHtml('index.html', '.test_list_title')->text());
+        $this->assertSame('Test List', $this->filterHtml('index.html', '.test_list_title')->text());
     }
 
     /**

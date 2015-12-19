@@ -46,6 +46,6 @@ class Builder
 
     private function prepareGroupName(ClassDoc $classDoc)
     {
-        return $classDoc->hasGroup() ? $classDoc->getGroup() : '未分類';
+        return $classDoc->hasGroup() ? $classDoc->getGroup() : 'Uncategorized';
     }
 }

@@ -38,12 +38,12 @@ class MultiPagesHtmlPrinter extends AbstractHtmlPrinter
         $html[] = '<html>';
         $html[] = $this->createHtmlHead();
         $html[] = '<body>';
-        $html[] = '<h1 class="test_list_title">テスト一覧</h1>';
+        $html[] = '<h1 class="test_list_title">Test List</h1>';
         $html[] = '<table class="test_list">';
         $html[] = '<tr class="label">';
-        $html[] = '<th>テスト名</th>';
-        $html[] = '<th>判定</th>';
-        $html[] = '<th>集計</th>';
+        $html[] = '<th>Test Name</th>';
+        $html[] = '<th>Result</th>';
+        $html[] = '<th>Rate</th>';
         $html[] = '</tr>';
 
         foreach ($this->testList as $name => $index) {
