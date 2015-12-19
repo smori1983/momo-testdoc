@@ -4,8 +4,8 @@ namespace Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter;
 use Momo\TestDoc\PHPUnitDoc\PHPUnit\BasicTestListener;
 use Momo\TestDoc\PHPUnitDoc\PHPUnit\Output\OutputInterface;
 use org\bovigo\vfs\vfsStream;
-use org\bovigo\vfs\vfsStreamWrapper;
 use org\bovigo\vfs\vfsStreamDirectory;
+use org\bovigo\vfs\vfsStreamWrapper;
 use Symfony\Component\DomCrawler\Crawler;
 
 abstract class HtmlPrinterTestCase extends \PHPUnit_Framework_TestCase

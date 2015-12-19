@@ -2,15 +2,15 @@
 namespace Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter;
 
 use Momo\TestDoc\PHPUnitDoc\MethodDoc;
-use Momo\TestDoc\PHPUnitDoc\TestDocContainer;
-use Momo\TestDoc\PHPUnitDoc\Output\OutputInterface;
 use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Builder;
-use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Root;
-use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Set;
 use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Group;
 use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Item;
+use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Root;
+use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\TestResult\Set;
 use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\Util\TestDataExpression;
 use Momo\TestDoc\PHPUnitDoc\Output\DefaultHtmlPrinter\Util\TestDataPage;
+use Momo\TestDoc\PHPUnitDoc\Output\OutputInterface;
+use Momo\TestDoc\PHPUnitDoc\TestDocContainer;
 
 abstract class AbstractHtmlPrinter implements OutputInterface
 {
