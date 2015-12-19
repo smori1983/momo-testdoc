@@ -1,5 +1,5 @@
 <?php
-namespace Momo\TestDoc\PHPUnitDoc\Printer;
+namespace Momo\TestDoc\PHPUnitDoc\Output;
 
 use Momo\TestDoc\PHPUnitDoc\TestDocContainer;
 
