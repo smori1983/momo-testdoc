@@ -10,20 +10,7 @@ class DummyTestB03
 {
     public function getDataSet()
     {
-        $yaml = <<<YAML
-user:
-    -
-        id: 1
-        name: "user01"
-        age: 30
-    -
-        id: 2
-        name: "user02"
-        age:
-admin:
-YAML;
-
-        return new YamlDataSet($yaml);
+        return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(__DIR__ . '/DummyTestB03.yml');
     }
 
     /**
