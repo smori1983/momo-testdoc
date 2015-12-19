@@ -8,6 +8,7 @@
         "mikey179/vfsStream": "~1.0",
         "piece/stagehand-testrunner": "~4.0",
         "phpunit/phpunit": "~4.8",
+        "phpunit/dbunit": "~2.0",
         "symfony/dom-crawler": "~2.0",
         "symfony/css-selector": "~2.0"
     },
