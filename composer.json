@@ -19,7 +19,8 @@
     "autoload-dev": {
         "psr-4": {
             "Momo\\TestDoc\\": [
-                "tests/"
+                "tests/",
+                "tests/files/"
             ]
         }
     }
