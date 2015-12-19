@@ -21,12 +21,25 @@ abstract class AbstractHtmlPrinter implements OutputInterface
     private $testDataExpr = null;
     private $testDataPage = null;
 
-    public function __construct($outputDir)
+    public function __construct($outputDir = null)
     {
-        $this->setOutputDir($outputDir);
+        $this->setOutputDir($this->resolveOutputDir($outputDir));
         $this->testResultBuilder = new Builder();
         $this->testDataExpr = new TestDataExpression();
         $this->testDataPage = new TestDataPage();
+    }
+
+    protected function resolveOutputDir($outputDir = null)
+    {
+        if (is_string($envDir = getenv('PHPUNITDOC_OUTPUTDIR')) && is_dir($envDir)) {
+            return $envDir;
+        }
+
+        if (is_string($outputDir) && is_dir($outputDir)) {
+            return $outputDir;
+        }
+
+        throw new \RuntimeException('Output directory not found.');
     }
 
     protected function setOutputDir($outputDir)
